@@ -1,33 +1,37 @@
-# AI_1
-Armenian Coin Classification with Deep Learning and Knowledge Representation
-Team Members: Aleksandr Barseghyan
+AI_1
+Armenian Coin Classification Using Deep Learning
+
+Team Member:
+Aleksandr Barseghyan
 
 Project Overview
 
-This project focuses on automatic classification of Armenian coins using Deep Learning techniques combined with a Knowledge Representation (KR) component.
+This project focuses on automatic classification of Armenian coins using Deep Learning techniques.
 
-The system uses Convolutional Neural Networks (CNNs) based on the MobileNetV2 architecture to classify images of Armenian coins into their respective denominations.
+The system uses Convolutional Neural Networks (CNNs) to classify images of Armenian coins into their respective denominations. The model is based on the MobileNetV2 architecture, which is designed for efficient image recognition while maintaining high accuracy.
 
-To enhance interpretability and structured reasoning, the deep learning predictions can be integrated with semantic knowledge representation using ontologies and rule-based reasoning.
-
-The project demonstrates how perception (Deep Learning) and reasoning (Knowledge Representation) can be combined in a unified AI system.
+The goal of this project is to demonstrate how deep learning models can automatically recognize different coin denominations from images, which is a common computer vision task.
 
 Repository Structure
-project/
-│
-├── data/                  # Armenian coin dataset
-├── models/                # Saved trained models
-├── notebooks/             # Experiments and visualization
-├── src/
-│   ├── train.py           # Training pipeline
-│   ├── inference.py       # Prediction script
-│   └── ontology_reasoning.py
-│
-├── report.pdf             # Final project report
-├── README.md              # Project documentation
-Technologies Used
 
-Deep Learning Frameworks:
+The entire implementation is contained in a single Jupyter notebook:
+
+AI_1/
+│
+├── Aleksandr_Barseghyan_armenian_coins_classification_final.ipynb
+│        # Main notebook containing:
+│        # - Data preprocessing
+│        # - Model training
+│        # - Model evaluation
+│        # - Visualization of results
+│
+├── report.pdf
+│        # Final project report
+│
+├── README.md
+│        # Project documentation
+Technologies Used
+Deep Learning Frameworks
 
 TensorFlow
 
@@ -35,13 +39,9 @@ PyTorch
 
 fastai
 
-Knowledge Representation Tools:
+These frameworks are used within the notebook to demonstrate different approaches to training deep learning models.
 
-Protégé
-
-Owlready2
-
-Other Libraries:
+Supporting Libraries
 
 NumPy
 
@@ -49,26 +49,53 @@ Matplotlib
 
 scikit-learn
 
+These libraries are used for data processing, visualization, and evaluation metrics.
+
 Installation and Setup
 1. Clone the Repository
-git clone https://github.com/your-repository/armenian-coin-classification.git
-cd armenian-coin-classification
-2. Create Python Environment
+git clone https://github.com/your-repository/AI_1.git
+cd AI_1
+2. Create a Python Environment
 
-It is recommended to use Python 3.10+
+It is recommended to use Python 3.10 or newer.
 
 python -m venv venv
 source venv/bin/activate
 
-Windows:
+For Windows:
 
 venv\Scripts\activate
 3. Install Dependencies
+
+Install the required libraries:
+
 pip install tensorflow
 pip install torch torchvision
 pip install fastai
 pip install numpy matplotlib scikit-learn
-pip install owlready2
+pip install jupyter
+Running the Project
+
+The entire implementation is contained in the notebook:
+
+Aleksandr_Barseghyan_armenian_coins_classification_final.ipynb
+
+To run the project:
+
+jupyter notebook
+
+Then open the notebook and run the cells sequentially.
+
+The notebook includes:
+
+Dataset loading and preprocessing
+
+Deep learning model training
+
+Model evaluation
+
+Visualization of training results
+
 Dataset
 
 The dataset contains images of Armenian coins from different denominations, including:
@@ -85,25 +112,21 @@ The dataset contains images of Armenian coins from different denominations, incl
 
 500 dram
 
-Images are preprocessed through:
+Images are preprocessed using:
 
 resizing
 
 normalization
 
-augmentation (rotation, flipping)
+data augmentation (rotation and flipping)
 
-These preprocessing steps improve model generalization and robustness.
+These preprocessing techniques help improve model performance and generalization.
 
 Model Architecture
 
-The primary model used is based on:
+The model used in this project is based on MobileNetV2, a lightweight convolutional neural network architecture designed for efficient image classification.
 
-MobileNetV2
-
-MobileNetV2 is a lightweight CNN architecture optimized for efficient image classification, especially suitable for mobile and embedded systems.
-
-Key characteristics:
+Key characteristics of MobileNetV2 include:
 
 Depthwise separable convolutions
 
@@ -111,116 +134,71 @@ Inverted residual blocks
 
 Linear bottlenecks
 
-Low computational complexity
+Reduced computational complexity
 
-This architecture allows the model to achieve high classification accuracy while maintaining computational efficiency.
+This architecture provides high accuracy while remaining computationally efficient.
 
-How to Run the Project
-Training the Model
+Training Configuration
 
-To train the neural network model:
+The model is trained using the following parameters:
 
-python src/train.py
+Parameter	Value
+Optimizer	Adam
+Loss Function	CrossEntropyLoss
+Batch Size	32
+Epochs	20–50
 
-Training parameters include:
-
-Optimizer: Adam
-
-Loss Function: CrossEntropyLoss
-
-Batch Size: 32
-
-Epochs: 20–50
-
-During training, the system generates:
+During training, the notebook generates:
 
 training loss curves
 
-validation accuracy
+validation accuracy metrics
 
-saved model checkpoints
-
-Running Inference (Prediction)
-
-To classify new coin images:
-
-python src/inference.py --image path_to_image.jpg
-
-The output will display:
-
-Predicted Class: 100 Dram
-Confidence: 97.4%
-Knowledge Representation Component
-
-The project also integrates symbolic reasoning using ontologies.
-
-An ontology describing Armenian coins can be created using:
-
-Protégé
-
-and processed in Python using:
-
-Owlready2
-
-Example reasoning rules include:
-
-coin value hierarchy
-
-material properties
-
-denomination relationships
-
-This allows the system to combine:
-
-Neural perception + symbolic reasoning
-
-which is part of the broader field of Neuro-Symbolic AI.
+model performance visualizations
 
 Results Summary
 
-The model achieved strong performance on the Armenian coin dataset.
+The trained model achieved strong performance on the Armenian coin dataset.
 
 Example results:
 
 Metric	Result
 Training Accuracy	~97%
 Validation Accuracy	~94%
-Loss	Low and stable after convergence
+Loss	Low and stable
 
-Additional evaluation methods include:
+Evaluation methods include:
 
-Confusion Matrix
+Confusion matrix
 
-Accuracy curves
+Accuracy and loss curves
 
-Feature map visualization
+Model prediction visualization
 
-These results demonstrate that deep convolutional networks can effectively recognize Armenian coin denominations from images.
+These results demonstrate that deep convolutional neural networks can effectively classify Armenian coin denominations from images.
 
 Future Improvements
 
-Possible extensions of this work include:
+Potential improvements for this project include:
 
-Increasing dataset size
+Increasing the dataset size
 
-Applying object detection models such as YOLOv3
+Applying more advanced architectures
 
-Improving interpretability using Grad-CAM
+Using object detection models for real-time coin recognition
 
-Deploying the model as a mobile application
-
-Extending ontology reasoning for richer semantic inference
+Deploying the model as a mobile or web application
 
 References
 
-Key works used in this project include research on:
+Relevant research and documentation used in this project include resources on:
+
+Deep learning for computer vision
+
+Convolutional neural networks
 
 MobileNet architectures
 
-Deep Learning frameworks
+Machine learning frameworks such as TensorFlow and PyTorch
 
-Neuro-symbolic AI
-
-Semantic Web technologies
-
-Full references are available in the project report.
+Full references are included in the project report.
