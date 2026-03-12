@@ -1,0 +1,274 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2">
+    <Prefix name="" IRI="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Cyclist"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EgoVehicle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Pedestrian"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RoadUser"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Safe"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SpeedLimitSign"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Status"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#StopSign"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TrafficSign"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Unsafe"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSafetyStatus"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isNear"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasDistance"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasSpeed"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Person_01"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SafeState"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#UnsafeState"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#myCar"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sign1"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Cyclist"/>
+        <Class IRI="#RoadUser"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Pedestrian"/>
+        <Class IRI="#RoadUser"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Safe"/>
+        <Class IRI="#Status"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SpeedLimitSign"/>
+        <Class IRI="#TrafficSign"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#StopSign"/>
+        <Class IRI="#TrafficSign"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Unsafe"/>
+        <Class IRI="#Status"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Safe"/>
+        <Class IRI="#Unsafe"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#Pedestrian"/>
+        <NamedIndividual IRI="#Person_01"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Safe"/>
+        <NamedIndividual IRI="#SafeState"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Unsafe"/>
+        <NamedIndividual IRI="#UnsafeState"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#EgoVehicle"/>
+        <NamedIndividual IRI="#myCar"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#StopSign"/>
+        <NamedIndividual IRI="#sign1"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNear"/>
+        <NamedIndividual IRI="#sign1"/>
+        <NamedIndividual IRI="#myCar"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasSpeed"/>
+        <NamedIndividual IRI="#myCar"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">10</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDistance"/>
+        <NamedIndividual IRI="#sign1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">1</Literal>
+    </DataPropertyAssertion>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSafetyStatus"/>
+        <Class IRI="#EgoVehicle"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isNear"/>
+        <Class IRI="#EgoVehicle"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasSafetyStatus"/>
+        <Class IRI="#Status"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isNear"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasDistance"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasSpeed"/>
+        <Class IRI="#EgoVehicle"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasDistance"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasSpeed"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>Rule 2 (Pedestrian)</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#EgoVehicle"/>
+                <Variable IRI="/v"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class IRI="#Pedestrian"/>
+                <Variable IRI="/p"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#isNear"/>
+                <Variable IRI="/v"/>
+                <Variable IRI="/p"/>
+            </ObjectPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasDistance"/>
+                <Variable IRI="/p"/>
+                <Variable IRI="/d"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#lessThan">
+                <Variable IRI="/d"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">5</Literal>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasSafetyStatus"/>
+                <Variable IRI="/v"/>
+                <NamedIndividual IRI="#UnsafeState"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>Rule 1 (Stop Sign)</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#EgoVehicle"/>
+                <Variable IRI="/v"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class IRI="#StopSign"/>
+                <Variable IRI="/s"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#isNear"/>
+                <Variable IRI="/v"/>
+                <Variable IRI="/s"/>
+            </ObjectPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasDistance"/>
+                <Variable IRI="/s"/>
+                <Variable IRI="/d"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#lessThan">
+                <Variable IRI="/d"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2</Literal>
+            </BuiltInAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasSpeed"/>
+                <Variable IRI="/v"/>
+                <Variable IRI="/speed"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#greaterThan">
+                <Variable IRI="/speed"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">0</Literal>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasSafetyStatus"/>
+                <Variable IRI="/v"/>
+                <NamedIndividual IRI="#UnsafeState"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
