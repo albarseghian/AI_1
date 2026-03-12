@@ -1,0 +1,485 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2/"
+     xml:base="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:untitled-ontology-2="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2#hasSafetyStatus -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2#hasSafetyStatus">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2#EgoVehicle"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2#Status"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2#isNear -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2#isNear">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2#EgoVehicle"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2#hasDistance -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2#hasDistance">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2#hasSpeed -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2#hasSpeed">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2#EgoVehicle"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2#Cyclist -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2#Cyclist">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2#RoadUser"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2#EgoVehicle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2#EgoVehicle"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2#Pedestrian -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2#Pedestrian">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2#RoadUser"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2#RoadUser -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2#RoadUser"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2#Safe -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2#Safe">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2#Status"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2#Unsafe"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2#SpeedLimitSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2#SpeedLimitSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2#TrafficSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2#Status -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2#Status"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2#StopSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2#StopSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2#TrafficSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2#TrafficSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2#TrafficSign"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2#Unsafe -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2#Unsafe">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2#Status"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2#Person_01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2#Person_01">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2#Pedestrian"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2#SafeState -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2#SafeState">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2#Safe"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2#UnsafeState -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2#UnsafeState">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2#Unsafe"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2#myCar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2#myCar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2#EgoVehicle"/>
+        <untitled-ontology-2:hasSpeed rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10</untitled-ontology-2:hasSpeed>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2#sign1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2#sign1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2#StopSign"/>
+        <untitled-ontology-2:isNear rdf:resource="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2#myCar"/>
+        <untitled-ontology-2:hasDistance rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</untitled-ontology-2:hasDistance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2/v">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2/p">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2/d">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2/s">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2/speed">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>Rule 2 (Pedestrian)</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2#EgoVehicle"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2/v"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2#Pedestrian"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2/p"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2#isNear"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2/v"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2/p"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2#hasDistance"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2/p"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2/d"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+                                                        <swrl:arguments>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first rdf:resource="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2/d"/>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</rdf:first>
+                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </swrl:arguments>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2#hasSafetyStatus"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2/v"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2#UnsafeState"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>Rule 1 (Stop Sign)</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2#EgoVehicle"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2/v"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2#StopSign"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2/s"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2#isNear"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2/v"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2/s"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2#hasDistance"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2/s"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2/d"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+                                                        <swrl:arguments>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first rdf:resource="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2/d"/>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</rdf:first>
+                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </swrl:arguments>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2#hasSpeed"/>
+                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2/v"/>
+                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2/speed"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+                                                                        <swrl:arguments>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                <rdf:first rdf:resource="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2/speed"/>
+                                                                                <rdf:rest>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</rdf:first>
+                                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                    </rdf:Description>
+                                                                                </rdf:rest>
+                                                                            </rdf:Description>
+                                                                        </swrl:arguments>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2#hasSafetyStatus"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2/v"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/cognaize/ontologies/2026/2/untitled-ontology-2#UnsafeState"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
